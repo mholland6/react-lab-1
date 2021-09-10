@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.AdDesigner {
+  font-family: sans-serif;
+}
+
+.AdDesigner--Ad {
+  border: 3px solid black;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 0 2px 0;
+}
+
+.AdDesigner--Ad.dark {
+  color: white;
+  background-color: black;
+}
+
+button:active {
+  background-color: #1e60a9;
+}
+
+button:disabled {
+  background-color: gray;
+}
