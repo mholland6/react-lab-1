@@ -4,10 +4,21 @@
 .Header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   font-family: Caveat;
   font-size: 30px;
   color: #0e3c7e;
-  box-shadow: 0 0 2px 0;
+  border-bottom: 1px solid gray;
+  box-shadow: 0 0 6px 0;
+  padding: 5px;
 }
+
+.Welcome--Message {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: black;
+}
+
+
 
 

@@ -11,7 +11,7 @@ function Header({name}: Props) {
   return (
    <header className="Header">
    <p>Ice Cream Wars</p>  
-   <p>Welcome: {name}</p>  
+   <p className="Welcome--Message">Welcome {name}</p>  
    </header>
   )
 }
