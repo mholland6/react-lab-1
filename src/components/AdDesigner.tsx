@@ -5,22 +5,22 @@ import { useState } from "react";
 
 function AdDesigner() {
 
-  const [selectedFlavor, setSelectedFlavor] = useState("chocolate");
+  const [selectedFlavor, setSelectedFlavor] = useState("Strawberry");
   function setChocolate() {
-    setSelectedFlavor("chocolate")
+    setSelectedFlavor("Chocolate")
   };
   function setVanilla() {
-    setSelectedFlavor("vanilla")
+    setSelectedFlavor("Vanilla")
   };
   function setStrawberry() {
-    setSelectedFlavor("strawberry")
+    setSelectedFlavor("Strawberry")
   };
   
   // Light and Dark Themes
   const [colorMode, setColorMode] = useState("light");
   let addColorModeClass = "";
   if (colorMode === "dark") {
-    addColorModeClass = "dark";
+    addColorModeClass = " dark";
   }
   function setLightMode() {
     setColorMode("light");
@@ -38,10 +38,10 @@ function AdDesigner() {
   //   }
   // }
   
-  const [selected, setSelected] = useState("unselected")
-  function disableButton() {
-    setSelected(setStatus => "selected" )
-  }
+  // const [selected, setSelected] = useState("unselected")
+  // function disableButton() {
+  //   setSelected(setStatus => "selected" )
+  // }
 
   // Font Size 
   const [size, setSize] = useState(20);
@@ -58,20 +58,20 @@ function AdDesigner() {
 
   return (
     <div className="AdDesigner">
-      <h1>Ad Designer</h1>
+      <h1 className="AdDesigner--Caveat">Ad Designer</h1>
       <div>
 
       </div>
-      <div className={"AdDesigner--Ad" + " " + addColorModeClass}>
+      <div className={"AdDesigner--Ad"+ addColorModeClass}>
         <p>Vote For</p>
-        <p><span style={fontStyles} >{selectedFlavor}</span></p>
+        <p><span className="AdDesigner--Caveat" style={fontStyles} >{selectedFlavor}</span></p>
       </div>
       <div>
         <p>What to Support</p>
         <p>
-          <button disabled={selectedFlavor==="chocolate"} onClick={setChocolate}>Chocolate</button>
-          <button disabled={selectedFlavor==="vanilla"} onClick={setVanilla}>Vanilla</button>
-          <button disabled={selectedFlavor==="strawberry"} onClick={setStrawberry}>Strawberry</button>
+          <button disabled={selectedFlavor==="Chocolate"} onClick={setChocolate}>Chocolate</button>
+          <button disabled={selectedFlavor==="Vanilla"} onClick={setVanilla}>Vanilla</button>
+          <button disabled={selectedFlavor==="Strawberry"} onClick={setStrawberry}>Strawberry</button>
         </p>
       </div>
       <div>
@@ -83,7 +83,7 @@ function AdDesigner() {
       </div>
       <div>
         <p>Font Size</p>
-        <p>
+        <p className="FontSizeChangeRow">
           <button onClick={decreaseFontSize}>Down</button>
           <span className="AdDesigner--fontSize">{size}</span> 
           <button onClick={increaseFontSize}>Up</button>

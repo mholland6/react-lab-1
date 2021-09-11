@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
+button {
+  color: white;
+  background-color: #1e60a9;
+}
+
 .AdDesigner {
   font-family: sans-serif;
+}
+
+.AdDesigner--Caveat {
+  font-family: Caveat;
 }
 
 .AdDesigner--Ad {
@@ -9,12 +18,15 @@
   width: 150px;
   text-align: center;
   box-shadow: 0 0 2px 0;
+  border-color: #222;
 }
 
-.AdDesigner--Ad.dark {
+ .AdDesigner--Ad.dark {
   color: white;
   background-color: black;
-}
+  border-color:white;
+  box-shadow: 0 0 10px 0 gray;
+} 
 
 button:active {
   background-color: #1e60a9;
@@ -22,4 +34,8 @@ button:active {
 
 button:disabled {
   background-color: gray;
+}
+
+.FontSizeChangeRow > * {
+  margin: 3px;
 }
