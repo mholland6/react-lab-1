@@ -1,5 +1,6 @@
 import "./AdDesigner.css";
 import { useState } from "react";
+import Ad from "./Ad";
 
 
 
@@ -17,7 +18,7 @@ function AdDesigner() {
   };
   
   // Light and Dark Themes
-  const [colorMode, setColorMode] = useState("light");
+  const [colorMode, setColorMode] = useState("dark");
   let addColorModeClass = "";
   if (colorMode === "dark") {
     addColorModeClass = " dark";
@@ -62,10 +63,10 @@ function AdDesigner() {
       <div>
 
       </div>
-      <div className={"AdDesigner--Ad"+ addColorModeClass}>
+      {/* <div className={"AdDesigner--Ad"+ addColorModeClass}>
         <p>Vote For</p>
         <p><span className="AdDesigner--Caveat" style={fontStyles} >{selectedFlavor}</span></p>
-      </div>
+      </div> */}
       <div>
         <p>What to Support</p>
         <p>
