@@ -1,20 +1,18 @@
 import "./AdDesigner.css";
-import Ad from "../models/AdModel";
-import AdDesigner from './components/AdDesigner';
 
 interface Props {
-  ad: Ad;
+  flavor: string;
+  fontSize: number;
+  darkTheme: boolean;
 }
 
-function AdDisplay({ad}: Props) {
-  
-
+function Ad({flavor, fontSize, darkTheme }: Props) {
   return (
-    <div className={"AdDesigner--Ad"+ addColorModeClass}>
+    <div className={"AdDesigner--Ad"}>
     <p>Vote For</p>
-    <p><span className="AdDesigner--Caveat" style={fontStyles} >{ad.flavor}</span></p>
-  </div> 
+    <p><span className="AdDesigner--Caveat">{flavor}</span></p>
+  </div>
   )
 };
 
-export default AdDisplay;
+export default Ad;

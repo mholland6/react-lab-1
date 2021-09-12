@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import AdDesigner from './components/AdDesigner';
-import Ad from '../models/AdModel';
 import Ad from './components/Ad';
 import Votes from './components/Votes';
 
@@ -13,6 +12,8 @@ function App() {
     <div className="App">
       <Header name="Chirpus"/>
       <Ad flavor="Chocolate" fontSize={20} darkTheme={true}/>
+      <Ad flavor="Vanilla" fontSize={20} darkTheme={true}/>
+      <Ad flavor="Strawberry" fontSize={20} darkTheme={false}/>
       <AdDesigner/>
       <Votes/>
     </div>
