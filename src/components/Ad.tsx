@@ -3,13 +3,11 @@ import AdDesigner from "./AdDesigner"
 
 interface Props {
   flavor: string;
-  fontSize: number;
+  fontSize?: number;
   darkTheme: boolean;
 }
 
-function Ad({flavor, fontSize, darkTheme }: Props) {
-  let fontStyles = fontSize;
-
+function Ad({flavor, darkTheme }: Props) {
   return (
     <div className={"AdDesigner--Ad"}>
     <p>Vote For</p>
